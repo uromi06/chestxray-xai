@@ -1,0 +1,13 @@
+# Core
+torch==2.3.1
+torchvision==0.18.1
+
+# Metrics & utils
+scikit-learn==1.5.1
+numpy>=1.26
+pillow>=10.0
+matplotlib>=3.8
+
+# Optional (handy for progress bars / future Grad-CAM overlays)
+tqdm>=4.66
+opencv-python>=4.9
