@@ -156,30 +156,35 @@ These visualizations align with the quantitative results and highlight the model
 
 ### Environment Setup
 
-python -m venv venv
-.\venv\Scripts\activate       # Windows, # source venv/bin/activate    # macOS/Linux
+1. **Environment**
+   ```bash
+   # create a venv (example)
+   python -m venv .venv
+   .\.venv\Scripts\activate            # Windows
+   # source .venv/bin/activate         # macOS/Linux
+   pip install -r requirements.txt
 
-python -m pip install --upgrade pip
-pip install -r requirements.txt
 
+2. **Training**
+    ```bash
+    python -m src.train
 
-### Train
-python -m src.train
+  - **Builds** stratified loaders
+  - **Trains** for N epochs;saves best checkpoint as best_model.pt
+  - **Tunes** threshold (Youden’s J)
+  - **Prints** final test AUROC/AUPRC and Sens/Spec @ tuned threshold
 
-- **Builds** stratified loaders
-- **Trains** for N epochs;saves best checkpoint as best_model.pt
-- **Tunes** threshold (Youden’s J)
-- **Prints** final test AUROC/AUPRC and Sens/Spec @ tuned threshold
-
-### Evaluate saved model
-python -m src.test
+3. **Evaluate saved model**
+    ```bash
+    python -m src.test
  
-- Recomputes best threshold on validation and reports test metrics. 
+  - Recomputes best threshold on validation and reports test metrics. 
 
-### Generate Grad-CAM overlays
-python -m src.cam
+4. **Generate Grad-CAM overlays**
+   ```bash
+    python -m src.cam
 
-- Saves overlays to demo/ (e.g., cam_tp_01.jpg, cam_err_01.jpg).
+  - Saves overlays to demo/ (e.g., cam_tp_01.jpg, cam_err_01.jpg).
 
 ---
 
@@ -232,5 +237,6 @@ This repository **does not** redistribute image data.
 - **License (code):** MIT — see `LICENSE`.  
 - **Scope:** License applies to code only; data and pretrained weights remain under their own terms.  
 - **Disclaimer:** Research use only. Not intended for clinical diagnosis or patient care.
+
 
 
