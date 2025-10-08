@@ -110,12 +110,6 @@ A temperature-scaling step was applied on the validation logits to assess probab
 
 ---
 
-## 💾 Model Checkpoint
-A trained model checkpoint, best_model.pt (~43 MB), is included for reproducibility.
-It reproduces the reported test metrics and Grad-CAM visualizations exactly as shown.
-
----
-
 ## 🔍 Explainability — Grad-CAM Results
 
 Grad-CAM visualizations provide localized heatmaps of regions most influential in model decisions.
@@ -163,8 +157,7 @@ These visualizations align with the quantitative results and highlight the model
 ### Environment Setup
 
 python -m venv venv
-.\venv\Scripts\activate       # Windows
-# source venv/bin/activate    # macOS/Linux
+.\venv\Scripts\activate       # Windows, # source venv/bin/activate    # macOS/Linux
 
 python -m pip install --upgrade pip
 pip install -r requirements.txt
@@ -179,13 +172,11 @@ python -m src.train
 - **Prints** final test AUROC/AUPRC and Sens/Spec @ tuned threshold
 
 ### Evaluate saved model
-```bash
 python -m src.test
  
 - Recomputes best threshold on validation and reports test metrics. 
 
 ### Generate Grad-CAM overlays
-```bash
 python -m src.cam
 
 - Saves overlays to demo/ (e.g., cam_tp_01.jpg, cam_err_01.jpg).
@@ -241,4 +232,5 @@ This repository **does not** redistribute image data.
 - **License (code):** MIT — see `LICENSE`.  
 - **Scope:** License applies to code only; data and pretrained weights remain under their own terms.  
 - **Disclaimer:** Research use only. Not intended for clinical diagnosis or patient care.
+
 
