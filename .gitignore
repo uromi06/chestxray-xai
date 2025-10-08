@@ -1,0 +1,124 @@
+# ---------------------------------------
+# NIH-Pneumonia Repository — Clean .gitignore
+# Deep Learning (PyTorch) Project
+# ---------------------------------------
+
+# --- Python Bytecode / Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+venv/
+.env/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# --- IDE / Editor Metadata ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- OS Metadata ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Build / Packaging Artifacts ---
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Logs / Temp Files ---
+*.log
+*.out
+*.err
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# --- Training Artifacts ---
+runs/
+checkpoints/
+outputs/
+wandb/
+tensorboard/
+lightning_logs/
+
+# --- Datasets (DO NOT UPLOAD) ---
+data/
+datasets/
+dataset/
+*.zip
+*.tar
+*.tar.gz
+*.gz
+
+# --- Model Checkpoints ---
+# Keep best_model.pt (shared for reproducibility)
+last_model.pt
+# Uncomment the next line if you want to ignore all checkpoints
+# *.pt
+
+# --- Grad-CAM Visualizations ---
+# Keep the /demo folder and all its contents (results for showcase)
+!demo/**
+demo/.ipynb_checkpoints/
+
+# --- Reports / Notebooks ---
+.ipynb_checkpoints/
+*.ipynb_save
+
+# --- Local Configs / Secrets ---
+*.env
+.env.local
+config.json
+settings.json
+
+# --- Exported Documents ---
+*.pdf
+*.docx
+*.pptx
+*.csv
+*.xlsx
+
+# --- Testing / Coverage ---
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+.cache
+nosetests.xml
+coverage/
+.pytest_cache/
+
+# --- PyInstaller ---
+*.manifest
+*.spec
+
+# --- Temporary / System Files ---
+*~
+*.orig
+
+# ---------------------------------------
+# END OF FILE
+# ---------------------------------------
