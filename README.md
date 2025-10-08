@@ -102,8 +102,8 @@ A temperature-scaling step was applied on the validation logits to assess probab
 - Reliability curves below show minimal over- or under-confidence after scaling.
 
 <p align="center">
-  <img src="demo/Figure_1.png" width="45%">
-  <img src="demo/Figure_2.png" width="45%">
+  <img src="Figure_1.png" width="45%">
+  <img src="Figure_2.png" width="45%">
 </p>
 
 *(Left: raw probabilities  ·  Right: temperature-scaled, showing closer alignment with the diagonal ideal.)*
@@ -161,7 +161,7 @@ These visualizations align with the quantitative results and highlight the model
 ## ⚙️ How to Run
 
 ### Environment Setup
-```bash
+
 python -m venv venv
 .\venv\Scripts\activate       # Windows
 # source venv/bin/activate    # macOS/Linux
@@ -171,7 +171,6 @@ pip install -r requirements.txt
 
 
 ### Train
-```bash
 python -m src.train
 
 - **Builds** stratified loaders
@@ -242,3 +241,4 @@ This repository **does not** redistribute image data.
 - **License (code):** MIT — see `LICENSE`.  
 - **Scope:** License applies to code only; data and pretrained weights remain under their own terms.  
 - **Disclaimer:** Research use only. Not intended for clinical diagnosis or patient care.
+
